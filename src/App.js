@@ -8,6 +8,7 @@ import { fetchTopAlbums ,fetchNewAlbums,fetchSongs} from './api/api';
 import Section from './Section/Section';
 import FilterSection from './FilterSection/FilterSection';
 import  styles from './App.module.css';
+import Card from './Card/Card';
 function App() {
   const [topAlbumData,setTopAlbumData]=useState([]);
   const [newAlbumData,setNewAlbumData] = useState([]);
@@ -101,10 +102,10 @@ function App() {
       <Navbar/>
       <Hero/>
       <div className={styles.sectionWrapper}>
-      <Section data = {topAlbumData} title="Top Albums" type="album"/>
-      <Section data = {newAlbumData} title="New Albums" type="album"/>
-      <FilterSection data={newAlbumData} type='songFilter' title='Songs' filteredData={filteredData} filteredDataValues={filteredDataValues} value={value} handleChange={handleChange} handleToggle={handleToggle}/>
-
+       <Section data = {topAlbumData} title="Top Albums" type="album"/> 
+      {/* <Section data = {newAlbumData} title="New Albums" type="album"/> */}
+      {/* <FilterSection data={newAlbumData} type='songFilter' title='Songs' filteredData={filteredData} filteredDataValues={filteredDataValues} value={value} handleChange={handleChange} handleToggle={handleToggle}/> */}
+     
       </div>
       
     </div>
